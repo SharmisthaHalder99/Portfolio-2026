@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sharmistha Halder - UI/UX Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@1,500;1,600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- SEO & Social Meta Tags -->
+  <meta name="description"
+    content="Portfolio of Sharmistha Halder, a Senior UI/UX Designer crafting engaging user interfaces, intuitive SaaS experiences and pixel-perfect mobile apps.">
+  <meta property="og:title" content="Sharmistha Halder - UI/UX Portfolio">
+  <meta property="og:description"
+    content="A senior UI/UX Designer crafting engaging user interfaces, intuitive SaaS experiences and pixel-perfect mobile apps.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body>
+  <!-- Custom Mouse Follower -->
+  <div class="cursor-follower" id="cursor"></div>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="logo">
+      <img src="./assets/logo emblem.svg" alt="Sharmistha Halder Logo" class="logo-icon">
+      <span>Sharmistha<br>Halder</span>
+    </div>
+    <div class="nav-links" id="nav-links">
+      <a href="#home" class="nav-link active">Home</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#projects" class="nav-link">Projects</a>
+      <a href="#experience" class="nav-link">Experience</a>
+    </div>
+    <div class="nav-actions">
+      <button type="button" class="btn-primary" onclick="toggleModal(true)">Contact me</button>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Hero Section -->
+    <header class="hero" id="home">
+      <div class="hero-content">
+        <h1 class="hero-title">
+          Designing Tomorrow's Digital<br>
+          Interfaces <img src="./assets/me.svg" alt="Profile" class="inline-portrait">
+          Future-Ready<br>
+          Experiences
+        </h1>
+        <p class="hero-subtitle">
+          A senior UI/UX Designer crafting engaging user interfaces, intuitive<br>
+          SaaS experiences and pixel-perfect mobile apps.
+        </p>
+      </div>
+
+      <!-- Auto-scrolling Tilted Banners -->
+      <div class="banner-container">
+        <div class="banner-track">
+          <img src="./assets/hero_mockup_1_1776614011000.png" alt="SaaS Dashboard Mockup" class="banner-img">
+          <img src="./assets/mockup 2.png" alt="Mobile App Interface" class="banner-img">
+          <img src="./assets/mockup 3.png" alt="Web Platform Design" class="banner-img">
+          <img src="./assets/mockup 4.png" alt="Analytics Dashboard" class="banner-img">
+          <img src="./assets/mockup 5.png" alt="User Flow Diagram" class="banner-img">
+          <!-- Duplicate for infinite scroll -->
+          <img src="./assets/hero_mockup_1_1776614011000.png" alt="SaaS Dashboard Mockup" class="banner-img">
+          <img src="./assets/mockup 2.png" alt="Mobile App Interface" class="banner-img">
+          <img src="./assets/mockup 3.png" alt="Web Platform Design" class="banner-img">
+          <img src="./assets/mockup 4.png" alt="Analytics Dashboard" class="banner-img">
+          <img src="./assets/mockup 5.png" alt="User Flow Diagram" class="banner-img">
+        </div>
+      </div>
+    </header>
+
+    <!-- Intro / Highlight Text -->
+    <section class="intro" id="about">
+      <div class="intro-container">
+        <p class="reveal-text" id="reveal-text">
+          Specializing in user-friendly interfaces, mobile application design, and intuitive SaaS experiences that drive
+          engagement and usability.
+        </p>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects-section" id="projects">
+      <div class="section-badge">MY PROJECTS</div>
+      <h2 class="section-title">My Design Journey</h2>
+
+      <div class="projects-grid">
+        <!-- Project 1 -->
+        <div class="project-card">
+          <div class="card-content">
+            <p class="project-desc">Designed a pet management app with a smart dashboard and tracking to help elderly
+              users manage their pets' health seamlessly.</p>
+            <a href="./assets/project_1_1776614080091.png" class="view-project" target="_blank"
+              rel="noopener noreferrer">View project <span class="arrow">→</span></a>
+          </div>
+          <div class="card-image-wrapper">
+            <img src="./assets/project_1_1776614080091.png" alt="Pet Management App Dashboard" class="card-img"
+              loading="lazy">
+          </div>
+        </div>
+        <!-- Project 2 -->
+        <div class="project-card">
+          <div class="card-content">
+            <p class="project-desc">Built an e-commerce platform for Yudo, offering a sleek shopping experience with
+              mini
+              stores and tailored recommendations for luxury fashion lovers.</p>
+            <a href="./assets/project_2_1776614098736.png" class="view-project" target="_blank"
+              rel="noopener noreferrer">View project <span class="arrow">→</span></a>
+          </div>
+          <div class="card-image-wrapper blank-image">
+            <img src="./assets/project_2_1776614098736.png" alt="Yudo E-commerce Platform" class="card-img"
+              loading="lazy">
+          </div>
+        </div>
+        <!-- Project 3 -->
+        <div class="project-card">
+          <div class="card-content">
+            <p class="project-desc">Explored dashboard concepts for SaaS teams, balancing dense data, clear hierarchy,
+              and fast scanability across core product workflows.</p>
+            <a href="./assets/hero_mockup_2_1776614028704.png" class="view-project" target="_blank"
+              rel="noopener noreferrer">View project <span class="arrow">→</span></a>
+          </div>
+          <div class="card-image-wrapper blank-image">
+            <img src="./assets/hero_mockup_2_1776614028704.png" alt="SaaS Dashboard Interface" class="card-img"
+              loading="lazy">
+          </div>
+        </div>
+        <!-- Project 4 -->
+        <div class="project-card">
+          <div class="card-content">
+            <p class="project-desc">Designed mobile-first interface studies focused on polished visual systems,
+              simplified navigation, and smooth everyday interactions.</p>
+            <a href="./assets/hero_mockup_3_1776614045417.png" class="view-project" target="_blank"
+              rel="noopener noreferrer">View project <span class="arrow">→</span></a>
+          </div>
+          <div class="card-image-wrapper blank-image">
+            <img src="./assets/hero_mockup_3_1776614045417.png" alt="Mobile App Interface Study" class="card-img"
+              loading="lazy">
+          </div>
+        </div>
+      </div>
+
+      <div class="more-projects">
+        <button type="button" class="btn-primary" onclick="toggleModal(true)">Discuss more projects →</button>
+      </div>
+    </section>
+
+    <!-- Journey / Experience Section -->
+    <section class="journey-section" id="experience">
+      <div class="section-badge">EXPERIENCE</div>
+      <h2 class="section-title">My Creative Journey</h2>
+
+      <div class="journey-content">
+        <div class="journey-image">
+          <img src="./assets/vr_headsets_1776614114603.png" alt="VR Headsets Illustration" loading="lazy">
+        </div>
+        <div class="journey-timeline">
+          <!-- Experience 1 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <h3 class="timeline-title">Arc Document Solutions</h3>
+            <span class="timeline-date">Feb 2024 - Present</span>
+            <p class="timeline-desc">Experienced UI/UX designer with a strong focus on user-friendly interfaces, mobile
+              apps, and SaaS platforms, blending functional art with modern screen design.</p>
+          </div>
+          <!-- Experience 2 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <h3 class="timeline-title">Roldrive</h3>
+            <span class="timeline-date">Jan 2023 - Feb 2024</span>
+            <p class="timeline-desc">Redesigned the Roldrive website, admin portal for ride management, and chauffeur
+              directory. I also revamped the chauffeur booking app.</p>
+          </div>
+          <!-- Experience 3 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <h3 class="timeline-title">Bluetick Consultants LLP</h3>
+            <span class="timeline-date">Mar 2022 - Dec 2022</span>
+            <p class="timeline-desc">Spearhead mobile and website design with expertise in creating SEO friendly
+              platforms. Successfully designed and launched tools, websites, and B2B-oriented projects, fostering
+              measurable success.</p>
+          </div>
+
+          <button type="button" class="btn-primary download-cv" onclick="toggleModal(true)">Request CV ↓</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-cta">
+      <h2>
+        Let's <span class="footer-emoji">🫶</span> Create<br>
+        <span class="italic-serif">Something Iconic</span>
+      </h2>
+      <button type="button" class="btn-primary" onclick="toggleModal(true)">Contact me</button>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="logo">
+        <img src="./assets/logo emblem.svg" alt="Sharmistha Halder Logo" class="logo-icon">
+        <span>Sharmistha<br>Halder</span>
+      </div>
+      <div class="footer-links">
+        <div class="links-text">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#experience">Experience</a>
+        </div>
+        <div class="social-icons">
+          <button type="button" class="social-link" onclick="toggleModal(true)" aria-label="Ask for LinkedIn profile">
+            <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+          </button>
+          <button type="button" class="social-link" onclick="toggleModal(true)" aria-label="Ask for Instagram profile">
+            <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+          </button>
+          <button type="button" class="social-link" onclick="toggleModal(true)" aria-label="Ask for GitHub profile">
+            <i class="fa-brands fa-github" aria-hidden="true"></i>
+          </button>
+          <button type="button" class="social-link" onclick="toggleModal(true)" aria-label="Ask for Behance profile">
+            <i class="fa-brands fa-behance" aria-hidden="true"></i>
+          </button>
+          <button type="button" class="social-link" onclick="toggleModal(true)" aria-label="Ask for Dribbble profile">
+            <i class="fa-brands fa-dribbble" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <h1 class="huge-name">SHARMISTHA HALDER</h1>
+  </footer>
+
+  <!-- Contact Modal / Bottom Sheet -->
+  <div class="modal-overlay" id="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="contact-title"
+    aria-describedby="contact-description" onclick="toggleModal(false)">
+    <div class="modal-content" onclick="event.stopPropagation()">
+      <button type="button" class="close-btn" onclick="toggleModal(false)" aria-label="Close contact form">×</button>
+      <h2 id="contact-title">Get in Touch</h2>
+      <p id="contact-description">Fill out the form below to discuss your next project.</p>
+      <form class="contact-form" id="contact-form">
+        <div class="form-group">
+          <label for="contact-name">Name</label>
+          <input id="contact-name" name="name" type="text" placeholder="John Doe" required>
+        </div>
+        <div class="form-group">
+          <label for="contact-email">Email</label>
+          <input id="contact-email" name="email" type="email" placeholder="john@example.com" required>
+        </div>
+        <div class="form-group">
+          <label for="contact-message">Message</label>
+          <textarea id="contact-message" name="message" rows="4" placeholder="How can I help you?" required></textarea>
+        </div>
+        <p class="form-status" id="form-status" role="status" aria-live="polite" hidden></p>
+        <button type="submit" class="btn-primary w-full">Send Message</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+
+</html>
