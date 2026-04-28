@@ -40,7 +40,10 @@
       <a href="#experience" class="nav-link">Experience</a>
     </div>
     <div class="nav-actions">
-      <button type="button" class="btn-primary" onclick="toggleModal(true)">Contact me</button>
+      <a href="tel:+916291322505" class="btn-primary btn-call" id="nav-contact-btn">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.62 10.79a15.053 15.053 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.07 21 3 13.93 3 5a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1.02l-2.2 2.2Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Call me
+      </a>
       <div class="hamburger" id="hamburger">
         <span></span>
         <span></span>
@@ -54,27 +57,27 @@
     <header class="hero" id="home">
       <div class="hero-content">
         <h1 class="hero-title">
-          Designing Tomorrow's Digital<br>
+          Designing Tomorrow's Digital<br class="desktop-break">
           Interfaces <img src="./assets/me.svg" alt="Profile" class="inline-portrait">
           Future-Ready<br>
           Experiences
         </h1>
         <p class="hero-subtitle">
-          A senior UI/UX Designer crafting engaging user interfaces, intuitive<br>
-          SaaS experiences and pixel-perfect mobile apps.
+          A senior UI/UX Designer crafting engaging user interfaces, intuitive SaaS experiences and pixel-perfect mobile
+          apps.
         </p>
       </div>
 
       <!-- Auto-scrolling Tilted Banners -->
       <div class="banner-container">
         <div class="banner-track">
-          <img src="./assets/hero_mockup_1_1776614011000.png" alt="SaaS Dashboard Mockup" class="banner-img">
+
           <img src="./assets/mockup 2.png" alt="Mobile App Interface" class="banner-img">
           <img src="./assets/mockup 3.png" alt="Web Platform Design" class="banner-img">
           <img src="./assets/mockup 4.png" alt="Analytics Dashboard" class="banner-img">
           <img src="./assets/mockup 5.png" alt="User Flow Diagram" class="banner-img">
           <!-- Duplicate for infinite scroll -->
-          <img src="./assets/hero_mockup_1_1776614011000.png" alt="SaaS Dashboard Mockup" class="banner-img">
+
           <img src="./assets/mockup 2.png" alt="Mobile App Interface" class="banner-img">
           <img src="./assets/mockup 3.png" alt="Web Platform Design" class="banner-img">
           <img src="./assets/mockup 4.png" alt="Analytics Dashboard" class="banner-img">
@@ -87,8 +90,7 @@
     <section class="intro" id="about">
       <div class="intro-container">
         <p class="reveal-text" id="reveal-text">
-          Specializing in user-friendly interfaces, mobile application design, and intuitive SaaS experiences that drive
-          engagement and usability.
+          Specializing in user-friendly interfaces, mobile application design, and intuitive SaaS experiences.
         </p>
       </div>
     </section>
@@ -100,58 +102,55 @@
 
       <div class="projects-grid">
         <!-- Project 1 -->
-        <div class="project-card">
+        <a href="./project-petcare.html" class="project-card">
           <div class="card-content">
-            <p class="project-desc">Designed a pet management app with a smart dashboard and tracking to help elderly
-              users manage their pets' health seamlessly.</p>
-            <a href="./assets/project_1_1776614080091.png" class="view-project" target="_blank"
-              rel="noopener noreferrer">View project <span class="arrow">→</span></a>
+            <h3 class="card-heading">Heal, Effortlessly</h3>
+            <p class="project-desc">Designed a pill management app with smart reminders and tracking to help elderly
+              users manage medications and health independently.</p>
+            <span class="view-project">View project <span class="arrow">→</span></span>
           </div>
           <div class="card-image-wrapper">
-            <img src="./assets/project_1_1776614080091.png" alt="Pet Management App Dashboard" class="card-img"
-              loading="lazy">
+            <img src="./assets/pill managment.svg" alt="Pill Management App" class="card-img" loading="lazy">
           </div>
-        </div>
+        </a>
         <!-- Project 2 -->
-        <div class="project-card">
+        <a href="./project-yudo.html" class="project-card">
           <div class="card-content">
-            <p class="project-desc">Built an e-commerce platform for Yudo, offering a sleek shopping experience with
-              mini
-              stores and tailored recommendations for luxury fashion lovers.</p>
-            <a href="./assets/project_2_1776614098736.png" class="view-project" target="_blank"
-              rel="noopener noreferrer">View project <span class="arrow">→</span></a>
+            <h3 class="card-heading">Shop in Style</h3>
+            <p class="project-desc">Twilla's mobile app was designed to create a clean, premium shopping experience with
+              intuitive navigation, personalized discovery, and seamless checkout, bringing the brand’s elegance to
+              users on the go.</p>
+            <span class="view-project">View project <span class="arrow">→</span></span>
           </div>
           <div class="card-image-wrapper blank-image">
-            <img src="./assets/project_2_1776614098736.png" alt="Yudo E-commerce Platform" class="card-img"
-              loading="lazy">
+            <img src="./assets/twilla app.svg" alt="Twilla Mobile App" class="card-img" loading="lazy">
           </div>
-        </div>
+        </a>
         <!-- Project 3 -->
-        <div class="project-card">
+        <a href="./project-saas.html" class="project-card">
           <div class="card-content">
-            <p class="project-desc">Explored dashboard concepts for SaaS teams, balancing dense data, clear hierarchy,
-              and fast scanability across core product workflows.</p>
-            <a href="./assets/hero_mockup_2_1776614028704.png" class="view-project" target="_blank"
-              rel="noopener noreferrer">View project <span class="arrow">→</span></a>
+            <h3 class="card-heading">Luxury, Reimagined</h3>
+            <p class="project-desc">Twilla’s desktop website was created to deliver a clean, premium shopping experience
+              with intuitive navigation and seamless browsing that reflects the brand’s elegance.</p>
+            <span class="view-project">View project <span class="arrow">→</span></span>
           </div>
           <div class="card-image-wrapper blank-image">
-            <img src="./assets/hero_mockup_2_1776614028704.png" alt="SaaS Dashboard Interface" class="card-img"
-              loading="lazy">
+            <img src="./assets/twilla web.svg" alt="Twilla Web" class="card-img" loading="lazy">
           </div>
-        </div>
+        </a>
         <!-- Project 4 -->
-        <div class="project-card">
+        <a href="./project-mobile.html" class="project-card">
           <div class="card-content">
-            <p class="project-desc">Designed mobile-first interface studies focused on polished visual systems,
-              simplified navigation, and smooth everyday interactions.</p>
-            <a href="./assets/hero_mockup_3_1776614045417.png" class="view-project" target="_blank"
-              rel="noopener noreferrer">View project <span class="arrow">→</span></a>
+            <h3 class="card-heading">Built to Scale</h3>
+            <p class="project-desc">ARC Facilities app was designed to provide a seamless, unified experience across
+              desktop, mobile, and iPad, enabling quick access to documents and efficient facility management.
+            </p>
+            <span class="view-project">View project <span class="arrow">→</span></span>
           </div>
           <div class="card-image-wrapper blank-image">
-            <img src="./assets/hero_mockup_3_1776614045417.png" alt="Mobile App Interface Study" class="card-img"
-              loading="lazy">
+            <img src="./assets/facilities.svg" alt="ARC Facilities Web App" class="card-img" loading="lazy">
           </div>
-        </div>
+        </a>
       </div>
 
       <div class="more-projects">
@@ -166,7 +165,7 @@
 
       <div class="journey-content">
         <div class="journey-image">
-          <img src="./assets/vr_headsets_1776614114603.png" alt="VR Headsets Illustration" loading="lazy">
+          <img src="./assets/creative journey.png" alt="VR Headsets Illustration" loading="lazy">
         </div>
         <div class="journey-timeline">
           <!-- Experience 1 -->
@@ -195,7 +194,13 @@
               measurable success.</p>
           </div>
 
-          <button type="button" class="btn-primary download-cv" onclick="toggleModal(true)">Request CV ↓</button>
+          <a href="./assets/resume_updated.pdf" download="Sharmistha_Halder_Resume.pdf" class="btn-primary download-cv">
+            Request CV
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <path d="M8 2v8m0 0L5 7m3 3 3-3M2 12v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-1" stroke="currentColor"
+                stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </a>
         </div>
       </div>
     </section>
@@ -208,7 +213,10 @@
         Let's <span class="footer-emoji">🫶</span> Create<br>
         <span class="italic-serif">Something Iconic</span>
       </h2>
-      <button type="button" class="btn-primary" onclick="toggleModal(true)">Contact me</button>
+      <a href="mailto:sharmisthahalder99@gmail.com" class="btn-primary btn-mail">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="m2 7 10 7 10-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Contact me
+      </a>
     </div>
 
     <div class="footer-bottom">
@@ -224,21 +232,21 @@
           <a href="#experience">Experience</a>
         </div>
         <div class="social-icons">
-          <button type="button" class="social-link" onclick="toggleModal(true)" aria-label="Ask for LinkedIn profile">
+          <a href="https://www.linkedin.com/in/sharmistha-halder-021140209/" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn">
             <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
-          </button>
-          <button type="button" class="social-link" onclick="toggleModal(true)" aria-label="Ask for Instagram profile">
+          </a>
+          <a href="https://www.instagram.com/design_sharmi99?igsh=MTZneG5jcHA1YjJldA==" target="_blank" rel="noopener" class="social-link" aria-label="Instagram">
             <i class="fa-brands fa-instagram" aria-hidden="true"></i>
-          </button>
-          <button type="button" class="social-link" onclick="toggleModal(true)" aria-label="Ask for GitHub profile">
+          </a>
+          <a href="https://github.com/SharmisthaHalder99/" target="_blank" rel="noopener" class="social-link" aria-label="GitHub">
             <i class="fa-brands fa-github" aria-hidden="true"></i>
-          </button>
-          <button type="button" class="social-link" onclick="toggleModal(true)" aria-label="Ask for Behance profile">
+          </a>
+          <a href="https://www.behance.net/sharmishalder" target="_blank" rel="noopener" class="social-link" aria-label="Behance">
             <i class="fa-brands fa-behance" aria-hidden="true"></i>
-          </button>
-          <button type="button" class="social-link" onclick="toggleModal(true)" aria-label="Ask for Dribbble profile">
+          </a>
+          <a href="https://dribbble.com/Sharmistha99" target="_blank" rel="noopener" class="social-link" aria-label="Dribbble">
             <i class="fa-brands fa-dribbble" aria-hidden="true"></i>
-          </button>
+          </a>
         </div>
       </div>
     </div>

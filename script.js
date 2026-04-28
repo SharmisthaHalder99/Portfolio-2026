@@ -1,6 +1,8 @@
 // Cursor Follower
 const cursor = document.getElementById('cursor');
 let lastFocusedElement = null;
+const navbar = document.querySelector('.navbar');
+let lastScrollY = window.scrollY;
 
 document.addEventListener('mousemove', (e) => {
   if (cursor) {
@@ -53,6 +55,30 @@ window.addEventListener('scroll', () => {
     });
   }
 });
+
+window.addEventListener('scroll', () => {
+  if (!navbar) {
+    return;
+  }
+
+  const currentScrollY = Math.max(window.scrollY, 0);
+  const scrollDelta = currentScrollY - lastScrollY;
+  const isMenuOpen = document.getElementById('nav-links')?.classList.contains('active');
+
+  navbar.classList.toggle('scrolled', currentScrollY > 16);
+
+  if (isMenuOpen || currentScrollY <= 120) {
+    navbar.classList.remove('nav-hidden');
+  } else if (scrollDelta > 8) {
+    navbar.classList.add('nav-hidden');
+  } else if (scrollDelta < -8) {
+    navbar.classList.remove('nav-hidden');
+  }
+
+  if (Math.abs(scrollDelta) > 4) {
+    lastScrollY = currentScrollY;
+  }
+}, { passive: true });
 
 // Modal Toggle
 window.toggleModal = function(show) {
@@ -157,6 +183,7 @@ sections.forEach(section => observer.observe(section));
 // Static contact form fallback
 const contactForm = document.getElementById('contact-form');
 const formStatus = document.getElementById('form-status');
+const contactEmail = 'shalder99.ee@gmail.com';
 
 if (contactForm) {
   contactForm.addEventListener('submit', (event) => {
@@ -171,13 +198,15 @@ if (contactForm) {
     const email = formData.get('email');
     const message = formData.get('message');
     const subject = encodeURIComponent(`Portfolio inquiry from ${name}`);
-    const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`);
+    const body = encodeURIComponent(
+      `Hi Sharmistha,\n\n${message}\n\nSender details:\nName: ${name}\nEmail: ${email}`
+    );
 
-    window.location.href = `mailto:?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:${contactEmail}?cc=${encodeURIComponent(email)}&subject=${subject}&body=${body}`;
 
     if (formStatus) {
       formStatus.hidden = false;
-      formStatus.textContent = 'Your message is ready in your email app.';
+      formStatus.textContent = 'Your message is ready in your email app with a copy addressed to you.';
     }
   });
 }

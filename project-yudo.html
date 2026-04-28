@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop in Style – Twilla Mobile App · Sharmistha Halder</title>
+  <meta name="description" content="Twilla's mobile app – a premium shopping experience with intuitive navigation and seamless checkout.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@1,500;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="project-detail.css">
+</head>
+<body>
+  <div class="cursor-follower" id="cursor"></div>
+  <nav class="navbar">
+    <a href="./index.html#home" class="logo"><img src="./assets/logo emblem.svg" alt="Logo" class="logo-icon"><span>Sharmistha<br>Halder</span></a>
+    <div class="nav-links" id="nav-links">
+      <a href="./index.html#home" class="nav-link">Home</a>
+      <a href="./index.html#about" class="nav-link">About</a>
+      <a href="./index.html#projects" class="nav-link active">Projects</a>
+      <a href="./index.html#experience" class="nav-link">Experience</a>
+    </div>
+    <div class="nav-actions">
+      <button type="button" class="btn-primary" onclick="toggleModal(true)">Contact me</button>
+      <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+    </div>
+  </nav>
+
+  <main class="pd-main">
+
+    <!-- HERO -->
+    <header class="pd-hero">
+      <div class="pd-hero-inner">
+        <a href="./index.html#projects" class="pd-back">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M10 3L5 8l5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          All projects
+        </a>
+        <div class="pd-hero-grid">
+          <div class="pd-hero-text fade-up">
+            <p class="pd-eyebrow">Mobile App Design · Luxury E-Commerce</p>
+            <h1 class="pd-title">Shop in<br>Style</h1>
+            <p class="pd-summary">Twilla's mobile app was designed to create a clean, premium shopping experience with intuitive navigation, personalized discovery, and seamless checkout — bringing the brand's elegance directly to users on the go.</p>
+            <div class="pd-tags">
+              <span class="pd-tag">Product Design</span>
+              <span class="pd-tag">iOS Mobile</span>
+              <span class="pd-tag">Commerce UX</span>
+              <span class="pd-tag">Luxury Brand</span>
+            </div>
+            <div class="pd-meta-strip">
+              <div class="pd-meta-item"><span class="pd-meta-label">Role</span><strong>Product Design</strong></div>
+              <div class="pd-meta-divider"></div>
+              <div class="pd-meta-item"><span class="pd-meta-label">Brand</span><strong>Twilla</strong></div>
+              <div class="pd-meta-divider"></div>
+              <div class="pd-meta-item"><span class="pd-meta-label">Platform</span><strong>iOS Mobile</strong></div>
+            </div>
+          </div>
+          <div class="pd-hero-visual fade-up fade-delay-1">
+            <div class="pd-visual-glow"></div>
+            <img src="./assets/twilla app.svg" alt="Twilla mobile app interface">
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- PROCESS -->
+    <section class="pd-section pd-section-dark">
+      <div class="pd-section-inner">
+        <div class="pd-section-label fade-up">Process</div>
+        <h2 class="pd-section-title fade-up">Designing the Brand's Mobile Voice</h2>
+        <div class="pd-process-list">
+          <div class="pd-process-step fade-up">
+            <span class="pd-step-num">01</span>
+            <div class="pd-step-body">
+              <h3>Translated brand identity to mobile</h3>
+              <p>Worked with Twilla's brand guidelines to define a mobile-first visual language — type scale, colour palette, spacing tokens — that preserved the brand's elegance on a 390px screen.</p>
+            </div>
+          </div>
+          <div class="pd-process-step fade-up fade-delay-1">
+            <span class="pd-step-num">02</span>
+            <div class="pd-step-body">
+              <h3>Mapped discovery journeys</h3>
+              <p>Defined three distinct user modes — explorer, intent buyer, wishlist builder — and designed navigation flows that serve all three without cluttering the primary surface.</p>
+            </div>
+          </div>
+          <div class="pd-process-step fade-up fade-delay-2">
+            <span class="pd-step-num">03</span>
+            <div class="pd-step-body">
+              <h3>Polished every micro-interaction</h3>
+              <p>Added subtle animations, swipe gestures, and haptic cue opportunities to the prototype — details that elevate the experience from clean to genuinely luxurious.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ALL SCREENS GALLERY -->
+    <section class="pd-screens-section">
+      <div class="pd-screens-inner">
+        <div class="pd-screens-header fade-up">
+          <div class="pd-section-label">All Screens</div>
+          <h2>The Full Experience</h2>
+          <p>Every screen from the Twilla Mobile App — crafted to feel luxurious, intuitive, and on-brand at every touchpoint.</p>
+        </div>
+        <div class="pd-screens-grid">
+          <div class="pd-screen-item col-8 fade-up">
+            <img src="./assets/twilla app.svg" alt="Twilla app — home &amp; browse">
+            <span class="pd-screen-label">Browse</span>
+          </div>
+          <div class="pd-screen-item col-4 fade-up fade-delay-1">
+            <img src="./assets/hero_mockup_3_1776614045417.png" alt="Product detail view">
+            <span class="pd-screen-label">Product Detail</span>
+          </div>
+          <div class="pd-screen-item col-6 fade-up fade-delay-1">
+            <img src="./assets/mockup 2.png" alt="Collections &amp; wishlist">
+            <span class="pd-screen-label">Collections</span>
+          </div>
+          <div class="pd-screen-item col-6 fade-up fade-delay-2">
+            <img src="./assets/mockup 4.png" alt="Checkout flow">
+            <span class="pd-screen-label">Checkout</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NAV -->
+    <section class="pd-nav-section">
+      <div class="pd-nav-inner">
+        <a href="./project-petcare.html" class="pd-nav-btn secondary">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M10 3L5 8l5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Previous project
+        </a>
+        <a href="./project-saas.html" class="pd-nav-btn">
+          Next project
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 3l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <div class="modal-overlay" id="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="contact-title" aria-describedby="contact-description" onclick="toggleModal(false)">
+    <div class="modal-content" onclick="event.stopPropagation()">
+      <button type="button" class="close-btn" onclick="toggleModal(false)" aria-label="Close">×</button>
+      <h2 id="contact-title">Get in Touch</h2>
+      <p id="contact-description">Fill out the form below to discuss your next project.</p>
+      <form class="contact-form" id="contact-form">
+        <div class="form-group"><label for="contact-name">Name</label><input id="contact-name" name="name" type="text" placeholder="John Doe" required></div>
+        <div class="form-group"><label for="contact-email">Email</label><input id="contact-email" name="email" type="email" placeholder="john@example.com" required></div>
+        <div class="form-group"><label for="contact-message">Message</label><textarea id="contact-message" name="message" rows="4" placeholder="How can I help you?" required></textarea></div>
+        <p class="form-status" id="form-status" role="status" aria-live="polite" hidden></p>
+        <button type="submit" class="btn-primary w-full">Send Message</button>
+      </form>
+    </div>
+  </div>
+  <script src="script.js" defer></script>
+  <script src="project-detail.js" defer></script>
+</body>
+</html>
