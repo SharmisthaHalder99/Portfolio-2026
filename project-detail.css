@@ -147,8 +147,8 @@
 .pd-hero-visual img {
   display: block;
   width: 100%;
-  min-height: clamp(300px, 36vw, 560px);
-  object-fit: cover;
+  height: auto;
+  object-fit: contain;
   transition: transform 0.6s ease;
 }
 .pd-hero-visual:hover img { transform: scale(1.02); }
@@ -323,7 +323,7 @@
   border-top: 1px solid rgba(255,255,255,0.07);
   transition: background 0.3s;
 }
-.pd-process-step:last-child { border-bottom: 1px solid rgba(255,255,255,0.07); }
+
 .pd-step-num {
   font-size: 0.78rem;
   font-weight: 700;
@@ -470,6 +470,177 @@
 .pd-screen-item:hover .pd-screen-label { opacity: 1; transform: translateY(0); }
 
 /* ============================================================
+   CASE STUDY FULL PREVIEW
+   ============================================================ */
+.pd-casestudy-section {
+  padding: clamp(80px, 9vw, 128px) 0;
+  position: relative;
+  overflow: hidden;
+}
+/* Subtle background glow */
+.pd-casestudy-section::before {
+  content: '';
+  position: absolute;
+  width: 900px;
+  height: 500px;
+  background: radial-gradient(ellipse, rgba(18,216,204,0.05) 0%, transparent 70%);
+  top: 0; left: 50%;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+.pd-casestudy-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 clamp(20px, 5%, 80px);
+}
+/* Reuse screens-header styles — centred header above image */
+.pd-casestudy-inner .pd-screens-header {
+  margin-bottom: clamp(40px, 5vw, 64px);
+}
+/* Full-width mockup image */
+.pd-casestudy-mockup {
+  width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.07);
+  background: rgba(255,255,255,0.02);
+  box-shadow: 0 40px 120px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.04) inset;
+  position: relative;
+  transition: box-shadow 0.5s ease, border-color 0.4s;
+}
+.pd-casestudy-mockup:hover {
+  border-color: rgba(18,216,204,0.15);
+  box-shadow: 0 60px 160px rgba(0,0,0,0.6), 0 0 40px rgba(18,216,204,0.06);
+}
+.pd-casestudy-mockup img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 0.6s cubic-bezier(0.22,1,0.36,1);
+}
+.pd-casestudy-mockup:hover img { transform: scale(1.005); }
+
+/* ============================================================
+   NEXT / PREV NAVIGATION
+   ============================================================ */
+
+/* ============================================================
+   FIGMA PROTOTYPE CTA
+   ============================================================ */
+.pd-figma-section {
+  padding: clamp(72px, 9vw, 120px) 0;
+  background: var(--bg-color);
+  position: relative;
+  overflow: hidden;
+  border-top: 1px solid rgba(255,255,255,0.05);
+}
+/* Ambient glow */
+.pd-figma-section::before {
+  content: '';
+  position: absolute;
+  width: 700px;
+  height: 400px;
+  background: radial-gradient(ellipse, rgba(18,216,204,0.07) 0%, transparent 70%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+.pd-figma-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 clamp(20px, 5%, 80px);
+  text-align: left;
+  position: relative;
+  z-index: 1;
+}
+.pd-figma-title {
+  font-size: clamp(28px, 4vw, 48px);
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  line-height: 1.1;
+  margin-bottom: 16px;
+}
+.pd-figma-desc {
+  color: var(--text-secondary);
+  font-size: clamp(15px, 1.5vw, 17px);
+  line-height: 1.7;
+  max-width: 520px;
+  margin: 0 auto 40px;
+}
+
+/* The button itself */
+.pd-figma-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 18px 36px;
+  background: var(--accent);
+  color: #000;
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0.01em;
+  border-radius: 12px;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  transition: background 0.25s, transform 0.25s, box-shadow 0.25s;
+  box-shadow: 0 0 0 0 rgba(18,216,204,0);
+}
+/* Shimmer sweep on hover */
+.pd-figma-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -80%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent 0%, rgba(255,255,255,0.25) 50%, transparent 100%);
+  transform: skewX(-20deg);
+  transition: left 0.5s ease;
+}
+.pd-figma-btn:hover::before { left: 150%; }
+.pd-figma-btn:hover {
+  background: var(--accent-hover);
+  transform: translateY(-3px);
+  box-shadow: 0 16px 48px rgba(18,216,204,0.25);
+}
+.pd-figma-btn svg {
+  flex-shrink: 0;
+  transition: transform 0.25s;
+}
+.pd-figma-btn:hover svg { transform: scale(1.15) rotate(-3deg); }
+
+/* Small helper note */
+.pd-figma-note {
+  margin-top: 18px;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+.pd-figma-note svg { opacity: 0.5; }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .pd-figma-btn {
+    padding: 16px 28px;
+    font-size: 0.9rem;
+    width: 100%;
+    justify-content: center;
+  }
+  .pd-figma-inner {
+    padding: 0 20px;
+  }
+}
+@media (max-width: 480px) {
+  .pd-figma-inner { padding: 0 16px; }
+  .pd-figma-title { font-size: clamp(22px, 6vw, 32px); }
+}
+
+/* ============================================================
    NEXT / PREV NAVIGATION
    ============================================================ */
 .pd-nav-section {
@@ -521,14 +692,121 @@
   .pd-hero-grid { grid-template-columns: 1fr; }
   .pd-hero-visual { order: -1; }
 }
-@media (max-width: 640px) {
+
+/* ── Mobile: 768px ── */
+@media (max-width: 768px) {
+  /* Hero */
+  .pd-main { padding-top: 64px; }
+
+  .pd-hero {
+    padding-top: clamp(48px, 6vw, 80px);
+  }
+
+  .pd-hero-inner {
+    padding: 0 20px;
+  }
+
+  .pd-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    padding-bottom: clamp(48px, 6vw, 80px);
+  }
+
+  /* Stack: image first on mobile */
+  .pd-hero-visual { order: -1; }
+
+  .pd-title {
+    font-size: clamp(36px, 9vw, 60px);
+    line-height: 1;
+  }
+
+  .pd-summary {
+    font-size: clamp(14px, 3.5vw, 17px);
+  }
+
+  /* Meta strip — full width, wrap items */
+  .pd-meta-strip {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .pd-meta-item {
+    flex: 1 1 auto;
+    min-width: 0;
+    padding: 12px 14px;
+  }
+
+  .pd-meta-divider {
+    display: none;
+  }
+
+  /* Sections */
+  .pd-section,
+  .pd-overview-section,
+  .pd-casestudy-section {
+    padding: clamp(52px, 7vw, 80px) 0;
+  }
+
+  .pd-section-inner,
+  .pd-casestudy-inner {
+    padding: 0 20px;
+  }
+
+  .pd-section-title {
+    font-size: clamp(26px, 6vw, 40px);
+    margin-bottom: clamp(28px, 4vw, 44px);
+  }
+
+  /* Screens grid: single col */
   .pd-screens-grid { grid-template-columns: 1fr; }
-  .pd-screen-item { min-height: clamp(200px, 60vw, 380px); }
-  .pd-process-step { grid-template-columns: 1fr; gap: 10px; }
+  .pd-screen-item { min-height: clamp(200px, 60vw, 340px); }
+
+  /* Process steps: single col */
+  .pd-process-step {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
   .pd-step-num::after { display: none; }
-  .pd-nav-inner { flex-direction: column; align-items: stretch; }
+
+  /* Nav buttons */
+  .pd-nav-inner {
+    flex-direction: column;
+    align-items: stretch;
+  }
   .pd-nav-btn { justify-content: center; }
-  .pd-meta-strip { width: 100%; }
-  .pd-meta-item { flex: 1; padding: 14px 16px; }
+
+  /* Insight cards */
   .pd-insight-card-inner { flex-direction: column; gap: 12px; }
+
+  /* Two column overview: stack */
+  .pd-two-col { grid-template-columns: 1fr; gap: 32px; }
+}
+
+/* ── Extra small: 480px ── */
+@media (max-width: 480px) {
+  .pd-hero-inner,
+  .pd-section-inner,
+  .pd-casestudy-inner,
+  .pd-nav-inner { padding: 0 16px; }
+
+  .pd-title { font-size: clamp(30px, 8vw, 48px); }
+
+  .pd-eyebrow { font-size: 0.65rem; }
+
+  .pd-meta-item { padding: 10px 12px; }
+
+  .pd-meta-item strong { font-size: 0.82rem; }
+
+  .pd-screens-header h2,
+  .pd-casestudy-inner .pd-screens-header h2 { font-size: clamp(24px, 6vw, 36px); }
+
+  .pd-back {
+    font-size: 0.8rem;
+    margin-bottom: clamp(28px, 5vw, 44px);
+  }
+
+  /* Case study mockup — ensure no horizontal overflow */
+  .pd-casestudy-mockup {
+    border-radius: 12px;
+  }
 }
